@@ -205,7 +205,7 @@ body {
 
 #shape-two {
     position: absolute;
-    top: 69%;
+    top: 527px;
     left: 5%;
     animation: animationFramesTwo 13s infinite linear;
     animation-duration: 13s;
@@ -243,7 +243,7 @@ body {
 }
 
 @keyframes swivel {
-    from { transform: rotate(-180deg)}
+    from { transform: rotate(-180deg);}
     to {transform: rotate(-270deg);}  
 }
 
@@ -334,10 +334,13 @@ body {
     content:'';
     background-image: url('images/shape-16.svg');
     position: absolute;
-    top: 954px;
-    width: 500px;
+    top: 867px;
+    width: 850px;
     height: 500px;
+    right: -40px;
     background-repeat: no-repeat;
+    transform: rotateZ(180deg);
+    z-index: -1;
 
 }
 
@@ -358,10 +361,12 @@ body {
 
 #centralcontainer {
     display: grid;
-    gap: 50px 100px;
+    gap: 50px 0px;
     grid-template-columns: 1fr 1fr 2fr;
-    margin-left: 240px;
+    margin-left: 180px;
     margin-top: 80px;
+    align-items: center;
+    position: relative;
 }
 
 #twoboxcontainer {
@@ -369,7 +374,7 @@ body {
     flex-direction: column;
 }
 
-.centralboxleft {
+.centralboxright {
     outline-style: dotted;
     outline-color: antiquewhite;
     outline-width: 10%;
@@ -383,7 +388,7 @@ body {
     border-radius: 15px;
 }
 
-.centralboxlefttwo {
+.centralboxrighttwo {
     outline-style: dotted;
     outline-color: antiquewhite;
     outline-width: 10%;
@@ -397,19 +402,19 @@ body {
     border-radius: 15px;
 }
 
-.centralboxleft h4 {
+.centralboxright, .centralboxrighttwo, .centralboxleft, #centraltext h4 {
         font-family: "Lobster";
         text-decoration: bold;
-        align: center;
+        text-align: center;
 }
 
-.centralboxright {
+
+.centralboxleft {
     outline-style: dotted;
     outline-color: antiquewhite;
     outline-width: 10%;
     height: 150px;
-    width: 250px;;
-    margin-top: 188px;
+    width: 250px;
     padding-left: 20px;
     padding-right: 25px;
     text-align: center;
@@ -417,11 +422,6 @@ body {
     border-radius: 15px;   
 }
 
-.centralboxright h4 {
-    font-family: "Lobster";
-    text-decoration: bold;
-    align: center;
-}
    
 ul.no_bullet {
     list-style-type: none;
@@ -451,33 +451,31 @@ li.check {
 
 
 
+#round-shape-four {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 445px;
+    animation: rotated 10s linear infinite;
+}
 
 
-
-.round-shape-four:before {
+#round-shape-four:before {
     content: "";
     width: 10px;
     height: 10px;
     position: absolute;
-    top: 50%;
-    left: -5px;
-    background-image: initial;
-        background-position-x: initial;
-        background-position-y: initial;
-        background-size: initial;
-        background-repeat-x: initial;
-        background-repeat-y: initial;
-        background-attachment: initial;
-        background-origin: initial;
-        background-clip: initial;
     background-color: rgb(221, 171, 246);
-        border-radius: 50%;
-        border-top-left-radius: 50%;
-        border-top-right-radius: 50%;
-        border-bottom-right-radius: 50%;
-        border-bottom-left-radius: 50%;
+    border-radius: 50%;
+
+    
 }
 
+@keyframes rotated {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
 
 *, :after, :before {
     box-sizing: border-box;
