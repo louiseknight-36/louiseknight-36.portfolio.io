@@ -330,9 +330,9 @@ body {
 
 }
 
-.skills::after {
+#aboutcontainer::after {
     content:'';
-    background-image: url("images/shape-16.svg");
+    background-image: url('images/shape-16.svg');
     position: absolute;
     top: 954px;
     width: 500px;
