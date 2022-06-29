@@ -367,16 +367,19 @@ body {
     margin-top: 80px;
     align-items: center;
     position: relative;
+    
 }
 
 #twoboxcontainer {
     display: flex;
     flex-direction: column;
+    z-index: 6;
 }
 
 .centralboxright {
     outline-style: dotted;
     outline-color: antiquewhite;
+    background-color: #fff;
     outline-width: 10%;
     height: 170px;
     width: 300px;;
@@ -391,6 +394,7 @@ body {
 .centralboxrighttwo {
     outline-style: dotted;
     outline-color: antiquewhite;
+    background-color: #fff;
     outline-width: 10%;
     height: 200px;
     width: 300px;;
@@ -412,6 +416,7 @@ body {
 .centralboxleft {
     outline-style: dotted;
     outline-color: antiquewhite;
+    background-color: #fff;
     outline-width: 10%;
     height: 150px;
     width: 250px;
@@ -442,12 +447,27 @@ li.check {
     }
     
 
-
-
-
-#centraltext {
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#centraltext h4 {
+    font-family: "Lobster";
+    text-decoration: bold;
+    text-align: center;
+    font-size: 24px;
 }
+
+#centraltext p {
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ padding-left: 60px;;
+ padding-right: 60px;
+ text-align: justify;
+ line-height: 1.5;
+}
+
+
+.keyword{
+    font-weight: bolder;
+
+}
+
 
 
 
@@ -458,6 +478,7 @@ li.check {
     top: 50%;
     left: 445px;
     animation: rotated 10s linear infinite;
+    z-index: 1;
 }
 
 
@@ -468,6 +489,8 @@ li.check {
     position: absolute;
     background-color: rgb(221, 171, 246);
     border-radius: 50%;
+    z-index: -1;
+
 
     
 }
