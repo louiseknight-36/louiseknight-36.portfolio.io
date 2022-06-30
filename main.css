@@ -259,7 +259,7 @@ body {
     width: 33%;
     margin-top: -48px;
     margin-right: 220px;
-    padding: 10px 30px 10px 40px;
+    padding: 10px 0px 10px 20px;
     z-index: 5;
    
 }
@@ -362,8 +362,7 @@ body {
     display: grid;
     gap: 50px 0px;
     grid-template-columns: 1fr 1fr 2fr;
-    margin-left: 180px;
-    margin-top: 80px;
+    margin: 80px 0px 80px 180px;
     align-items: center;
     position: relative;
     overflow-y: hidden;
@@ -374,6 +373,7 @@ body {
 #twoboxcontainer {
     display: flex;
     flex-direction: column;
+    margin-bottom: 50px;
     z-index: 6;
 }
 
@@ -381,12 +381,9 @@ body {
     outline-style: dotted;
     outline-color: antiquewhite;
     background-color: #fff;
-    outline-width: 10%;
-    height: 170px;
-    width: 300px;;
+    width: 300px;
     margin-top: 58px;
-    padding-left: 20px;
-    padding-right: 25px;
+    padding: 0 25px 20px 20px;
     text-align: center;
     box-shadow: 5px 5px #c7c5c5;  
     border-radius: 15px;
@@ -396,12 +393,9 @@ body {
     outline-style: dotted;
     outline-color: antiquewhite;
     background-color: #fff;
-    outline-width: 10%;
-    height: 215px;
     width: 300px;;
     margin-top: 58px;
-    padding-left: 20px;
-    padding-right: 25px;
+    padding: 0 25px 20px 20px;
     text-align: center;
     box-shadow: 5px 5px #c7c5c5;  
     border-radius: 15px;
@@ -418,14 +412,12 @@ body {
     outline-style: dotted;
     outline-color: antiquewhite;
     background-color: #fff;
-    outline-width: 10%;
-    height: 150px;
-    width: 250px;
-    padding-left: 20px;
-    padding-right: 25px;
+    width: 300px;
+    margin-top: 58px;
+    padding: 0 25px 20px 20px;
     text-align: center;
-    box-shadow: 5px 5px #c7c5c5; 
-    border-radius: 15px;   
+    box-shadow: 5px 5px #c7c5c5;  
+    border-radius: 15px;
 }
 
    
@@ -502,7 +494,14 @@ li.check {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-left: 0;
                
+    }
+
+    #twoboxcontainer {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
     }
 
     .centralboxleft {
@@ -515,6 +514,7 @@ li.check {
     #centraltext {
         display: flex;
         flex-direction: column;
+        
         
     }
 
@@ -558,6 +558,19 @@ li.check {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+
+@media only screen and (max-width: 800px) {
+    [class*="col-"] {
+    width: 100%;
+}
+}
+
+@media only screen and (max-width: 600px) {
+        [class*="col-"] {
+        width: 100%;
+    }
+}
+
 [class*="col-"] {
     float: left;
     padding: 15px;
@@ -577,7 +590,7 @@ li.check {
     padding: 15px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     font-family: Lobster;
     font-size: 18px;
 }
@@ -600,12 +613,19 @@ button {
     border-radius: 5px;
 }
 
-#connect {
+#connect h3 {
+    font-family: Lobster;
+    font-size: 18px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: justify;
+}
+
+#connect p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     padding-left: 100px;
     padding-right: 100px;
-    padding-top: 50px;
     text-align: justify;
 }
 
@@ -633,3 +653,181 @@ button {
     text-decoration: underline;
     color: rgb(63, 63, 63);
 }
+
+@media only screen and (max-width: 800px) {
+    #work a {
+        text-align: center;
+        margin-left: 0;
+    }
+    #work h3 {
+        text-align: center;
+        margin-left: 0;
+    }
+    #connect h3{
+        text-align: center;
+        margin-left: 0;
+    }
+    #connect p{
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+/* #contactpage{
+    display: flex;
+    width: 100%;
+    z-index: index 1;
+}
+
+#cpleft{
+    width: 50%;
+    height: auto;
+    background: black;
+    clip-path: polygon(0 0, 69% 0, 31% 100%, 0% 100%);
+    position: relative;
+}
+#cpright {
+    
+    width: 50%;
+    height: auto;
+    background: rgb(93,226,241);
+    clip-path: polygon(69% 0, 100% 0%, 100% 100%, 31% 100%);
+} */
+
+#contactimg {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url('images/contact-4045623_1920.jpg');
+    opacity: 80%;
+}
+
+#contact {
+    display: flex; 
+    justify-content: flex-start;
+    width: 100%;
+    margin: 50px 25px 50px 150px;
+    position: relative;
+    z-index: 4;
+}   
+
+form{
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+fieldset { 
+    border: 0; 
+   
+}
+
+legend {
+    color:white;
+}
+
+label {
+    display: inline-flex;
+    flex-direction: row;
+    width: 90px;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    
+}
+
+.labeltitle {
+    font-family: Lobster;
+    padding-bottom: 10px;;
+}
+
+input,
+textarea {
+    font: 1.2em sans-serif;
+    width: 200px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    margin-top: 10px;
+}
+
+textarea {
+    vertical-align: top;
+    height: 5em; 
+    width: 80%;   
+    padding-left: 5px
+}
+
+input[type=text] {
+   padding-right: 20px;
+   margin-bottom: 50px;
+   font-family: Lobster;
+   font-weight: bold;
+   font-size: medium;
+}
+
+input[type=email] {
+    padding-right: 20px;
+    margin-bottom: 50px;
+    font-family: Lobster;
+    font-weight: bold;
+    font-size: medium;
+ }
+
+#message {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+input[type=submit] {
+    
+    align-items: center;
+    color:whitesmoke;
+    background-color: black;
+    border-color: antiquewhite;
+    text-align: center;
+    position: sticky;
+    border-radius: 50px;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+}
+
+/* collison button faffing https://speckyboy.com/custom-hover-click-effects-css-javascript/ */
+/* .btn-11 {
+    position: relative;
+    $btn-color: random-color($max:200);
+    $btn-color-dark: shade($btn-color, 40%);
+    color: tint($btn-color);
+    
+    &:before,
+    &:after {
+      @include absolute(50%);
+      content: '';
+      @include size(20px);
+      background-color: $btn-color;
+      border-radius: 50%;
+    }
+    
+    &:before {
+      left: -20px;
+      transform: translate(-50%, -50%);
+      // animation: criss-cross-left 0.8s reverse;
+    }
+    
+    &:after {
+      right: -20px;
+      transform: translate(50%, -50%);
+      // animation: criss-cross-right 0.8s reverse;
+    }
+    
+    &:hover {
+      color: tint($btn-color, 75%); */
+  
+   

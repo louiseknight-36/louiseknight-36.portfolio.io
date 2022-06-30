@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Portfolio</title>
+  
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navcontainer" id="myNav" >
+                <div class="navigation"> <a href="index.html">Home</a>  </div>
+                <div class="navigation"> <a href="#">Gallery</a> </div>
+                <div class="navigation"><a href="Connect.html">Contact Me</a> </div>
+                <div class="facontainer"><a href="#" class="fa fa-facebook"></a>
+                <a href="https://www.linkedin.com/in/louise-knight-1428a1168/" class="fa fa-linkedin"></a></div>
+        </nav>
+    </header>
+    <main>
+        <div id="contactimg"></div>
+        <div id="contactpage">
+            <div id="cpleft"></div>
+            <div id="cpright"></div>
+        <div id="contact">
+            <div> 
+                <form id="contactform">
+                    
+                    <form action="/my-handling-form-page" method="post">
+                        <div class="labeltitle"> Contact Me</div>
+                    <div>
+                        <fieldset>
+                            <legend>Names</legend>
+                                <label for="fname">First name:</label>
+                                <input type="text" id="fname" name="fname" required>
+                                <label for="lname">Surname:</label>
+                                <input type="text" id="lname" name="lname">
+                        </fieldset>
+                    </div>
+                    <div>
+                        <fieldset>
+                            <legend>Email Address</legend>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                        </fieldset>
+                    </div>
+                        <fieldset>
+                            <legend>Reason for Message</legend>
+                                <div class="labeltitle">Reason for Message</div>
+                                <div class="radio">
+                            <label for="personal">Personal</label>
+                            <input type="checkbox" id="personal" name="personal">
+                            <label for="business">Business</label>
+                            <input type="checkbox" id="business" name="business">
+                    </div>
+                        <div id="message">
+                            <textarea name="message" rows="10" cols="30" required>Message</textarea>
+                        </div>
+                        </fieldset>
+                        <div id="button">                       
+                            <input type="submit" value="Submit">
+                         </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footercontainer">
+            <div id="footerrow">
+                <p>Louise Knight</p>
+                <p>07837 745 733</p>
+                <p>mrslouiserknight@gmail.com</p>
+                <a href="Connect.html">Contact Me</a>
+            </div>
+                <div class="row">
+                    <div class="col-3">
+                        <button>Let's Connect</button>
+                        <button>Subscribe</button>
+                    </div>
+                    <div class="col-5">
+                        <div id="connect">
+                            <h3>Let's Link</h3>
+                            <p>I am actively seeking connections in this role. Message me to connect, I am open to a whole range of ideas.</p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div id="work">
+                            <h3>See My Work</h3>
+                            <a href="https://louiseknight-36.github.io/louiseknight-36.portfolio.io/" target="_blank">Portfolio</a>
+                            <a href="https://thelittlebrowndog.uk" target="_blank">The Little Brown Dog</a>
+                            <a href="https://woodcraftingwithkindness.co.uk" target="_blank">Woodcrafting With Kindness</a>
+                            <a href="https://github.com/louiseknight-36" target="_blank">My GitHub</a>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <h2> Links</h2>
+                        <h2>More Links</h2>
+                    </div>
+                </div>
+        </div>
+    </footer>
+</body>
+<script src="main.js"></script>
+</html>
