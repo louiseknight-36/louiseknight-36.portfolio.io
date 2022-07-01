@@ -16,43 +16,6 @@ function myFunction() {
 // https://www.youtube.com/watch?v=xJAxjstgITk&list=PLpc_YvcwbxaRSFpQQSNBBN3WxhFV7OaI_&index=20
 
 
-
-const btn = document.querySelector('button');
-
-function sendData( data ) {
-  console.log( 'Sending data' );
-
-  const XHR = new XMLHttpRequest();
-
-  let urlEncodedData = "",
-      urlEncodedDataPairs = [],
-      name;
-
-  for( name in data ) {
-    urlEncodedDataPairs.push( encodeURIComponent( name ) + '=' + encodeURIComponent( data[name] ) );
-  }
-
-  urlEncodedData = urlEncodedDataPairs.join( '&' ).replace( /%20/g, '+' );
-
-  
-  XHR.addEventListener( 'load', function(event) {
-    alert( `Thanks for contacting me.  I'll be in touch soon!` );
-  } );
-
-  
-  XHR.addEventListener( 'error', function(event) {
-    alert( 'Oops! Something went wrong. Please try again.' );
-  } );
-
-  XHR.open( 'POST', 'https://example.com/cors.php' );  
-  XHR.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
-  XHR.send( urlEncodedData );
-}
-
-btn.addEventListener( 'click', function() {
-  sendData( {test:'ok'} );
-} )
-
 //don't think this works - whats XHR? lol//
 
 
@@ -77,3 +40,12 @@ btn.addEventListener( 'click', function() {
 //     });
 //   $('[href=#]').click(function(){return false});
 // });
+
+let popup = document.getElementById("popup")
+
+function openPopup() {
+  popup.classList.add("open-popup")
+}
+function closePopup() {
+  popup.classList.remove("open-popup")
+}
