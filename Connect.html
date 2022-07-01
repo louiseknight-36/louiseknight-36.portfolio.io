@@ -26,8 +26,7 @@
             <div id="cpright"></div>
         <div id="contact">
             <div> 
-                <form id="contactform">
-                    
+                <form id="contactform">                    
                     <form action="/my-handling-form-page" method="post">
                         <div class="labeltitle"> Contact Me</div>
                     <div>
@@ -59,13 +58,13 @@
                             <textarea name="message" rows="10" cols="30" required>Message</textarea>
                         </div>
                         </fieldset>
-                            <button type="submit" value="Submit" class="btn" onclick="openPopup()"></button>
-                        <div class="popup" id="popup">
-                            <img src="images/check-153363_640.png">
-                            <h2>Thank You</h2>
-                            <p>Your message has been sent! I will be in touch soon.</p>
-                            <button type="button" onclick="closePopup()">Ok</button>
-                        </div>
+                            <button type="submit" value="Submit" class="btn" onclick="openPopup()">Send</button>
+        <div class="popup" id="popup">
+            <img src="images/check-153363_640.png">
+            <h2>Thank You</h2>
+            <p>Your message has been sent! I will be in touch soon.</p>
+            <button type="button" onclick="closePopup()">Ok</button>
+        </div>
                          
                 </form>
             </div>

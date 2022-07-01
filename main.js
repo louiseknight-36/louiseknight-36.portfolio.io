@@ -49,3 +49,12 @@ function openPopup() {
 function closePopup() {
   popup.classList.remove("open-popup")
 }
+
+let popupform = document.getElementById("popupform")
+
+function openPopupform() {
+  popupform.classList.add("open-popupform")
+}
+function closePopupform() {
+  popupform.classList.remove("open-popupform")
+}
