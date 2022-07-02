@@ -50,11 +50,11 @@ function closePopup() {
   popup.classList.remove("open-popup")
 }
 
-let popupform = document.getElementById("popupform")
+let popupForm = document.getElementById("popupForm")
 
-function openPopupform() {
-  popupform.classList.add("open-popupform")
+function openPopupForm() {
+  popupForm.classList.add("open-popupForm")
 }
-function closePopupform() {
-  popupform.classList.remove("open-popupform")
+function closePopupForm() {
+  popupForm.classList.remove("open-popupForm")
 }
