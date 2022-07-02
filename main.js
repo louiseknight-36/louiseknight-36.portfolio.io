@@ -58,3 +58,19 @@ function openPopupForm() {
 function closePopupForm() {
   popupForm.classList.remove("open-popupForm")
 }
+
+
+// // let customerName = prompt("Please enter your name", "<name goes here>");
+
+// let customerName = document.getElementById("fname").value;
+// function prompt() {
+
+// // if (customerName!= null) {
+
+//     document.getElementById("welcome").innerHTML =
+
+//     "Hello " + customerName + "! How are you today?";
+
+//     // addEventListener(window.onload);
+// // }
+// }
