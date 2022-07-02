@@ -299,7 +299,7 @@ body {
 
     .blob { 
         display: block;
-        margin-left: 500px;
+        margin-left: 410px;
         position: absolute;
         margin-top: 0;
 
@@ -362,7 +362,7 @@ body {
     display: grid;
     gap: 50px 0px;
     grid-template-columns: 1fr 1fr 2fr;
-    margin: 80px 0px 80px 180px;
+    margin: 80px 0 0 180px;
     align-items: center;
     position: relative;
     overflow-y: hidden;
@@ -529,6 +529,8 @@ li.check {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 0;
+        
                
     }
 
@@ -536,6 +538,10 @@ li.check {
         display: flex;
         flex-direction: column;
         justify-content: center;
+}        
+
+.centralboxright, .centralboxrighttwo {
+        width: 40%;
        
 } 
 }
@@ -568,14 +574,10 @@ li.check {
 @media only screen and (max-width: 800px) {
     [class*="col-"] {
     width: 100%;
+    height: auto;
 }
 }
 
-@media only screen and (max-width: 600px) {
-        [class*="col-"] {
-        width: 100%;
-    }
-}
 
 [class*="col-"] {
     float: left;
@@ -584,10 +586,15 @@ li.check {
     height: 200px;
 }
 
+/* .col-3 {
+    height: auto !important;
+}
 
+.col-5 {
+    height: 
+} */
 #footercontainer {
     width: 100%;
-    margin-top: 10px;
 }
 
 #footerrow {
@@ -724,7 +731,7 @@ button {
     z-index: 4;
 }   
 
-form{
+form {
     margin: 0 auto;
     width: 400px;
     padding: 1em;
@@ -737,8 +744,9 @@ fieldset {
    
 }
 
+
 legend {
-    color:white;
+    color:#fff;
 }
 
 label {
@@ -770,6 +778,16 @@ textarea {
     height: 5em; 
     width: 80%;   
     padding-left: 5px
+}
+
+::placeholder {
+    font-size: 14px;
+}
+
+#contact button {
+    margin: 20px auto 0;
+    display: block;
+
 }
 
 input[type=text] {
@@ -919,7 +937,7 @@ input[type=submit] {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } 
 
-.popupFormcontainer {
+/* .popupFormcontainer {
         width:100%;
         height: 100vh;
         margin-top: -850px;
@@ -928,22 +946,24 @@ input[type=submit] {
         align-items: center;
         justify-content: center;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+} */
 
 .popupForm {
-    width: 800px;
+    width: auto;
+    /* height: 615px; */
+    padding: 50px;
     background: #fff;
     border:2px solid rgb(63, 63, 63);
     border-radius: 6px;
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.1);
+    top: 180%;
+    left: calc(50% - 252px);
+    /* transform: translate(-50%, -50%) scale(0.1); */
     text-align: center;
-    padding: 0 30px 30px;
     color: #333;
-    visibility: visible;
+    visibility: hidden;
     transition: transform 0.4s, top 0.4s;
+    z-index: 10;
 }
 
 .open-popupForm {
