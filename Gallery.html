@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Connect</title>
+  <title>Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,58 +21,30 @@
         </nav>
     </header>
     <main>
-        <div id="contactimg"></div>
-        <div id="contactpage">
-            <div id="cpcontainer">
-                <div id="cpright"></div>
-            </div>
-
-        <div id="contact">
-            <div> 
-                <form id="contactform">                    
-                    <form action="/my-handling-form-page" method="post">
-                        <div class="labeltitle"> Contact Me</div>
-                    <div>
-                        <fieldset>
-                            <legend>Names</legend>
-                                <label for="fname">First name:</label>
-                                <input type="text" id="fname" name="fname" required>
-                                <label for="lname">Surname:</label>
-                                <input type="text" id="lname" name="lname">
-                        </fieldset>
-                    </div>
-                    <div>
-                        <fieldset>
-                            <legend>Email Address</legend>
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
-                        </fieldset>
-                    </div>
-                        <fieldset>
-                            <legend>Reason for Message</legend>
-                                <div class="labeltitle">Reason for Message</div>
-                                <div class="radio">
-                            <label for="personal">Personal</label>
-                            <input type="checkbox" id="personal" name="personal">
-                            <label for="business">Business</label>
-                            <input type="checkbox" id="business" name="business">
-                    </div>
-                        <div id="message">
-                            <textarea name="message" id="message-text" rows="10" cols="30" maxlength="200" placeholder="How can I help?..." required></textarea>
-                        </div>
-                        </fieldset>
-                            <button type="submit" value="Submit" class="btn" onclick="formCompleted()" value="Reset form">Send</button>                         
-                </form>
-                <div id="welcome-container">
-                    <h2>Thanks for your message!</h2>
-                    <p>Hello <span id="outputFirstName"></span>! Thanks for your message of "<span id="outputMessage"></span>". I'll send my reply to the email you have entered (<span id="outputEmail"></span>). </p>
-                        <p>Many Thanks, Louise</p>
-                    <button id="close" onclick="closeWelcomeContainer()">Close</button>
+             <div class="carousel">
+                <h1>My Project Snaps</h1>
+                <p>Below are some screenshots from webpages I have created.  Hover over them to find out more.</p>
+                <div class="carouselimage">
+                    <div class="image"><img src="images/tlbdaboutus.png" alt="about us page for the little brown dog, that Louise created">
+                    <div class="tecust"><h2>Dynamic Counters</h2>
+                    <p>This about us page catches user interest buy having dymanic counters.  </p></div></div>
+                    <div class="image"><img src="images/wwkfaq.png" alt="FAQ page for woodcraftingwithkindness, that Louise created">
+                        <div class="tecust"><h2>Expanding Boxes</h2>
+                        <p>Maximising space by having answers visible when use clicks the question.</p></div></div>
+                    <div class="image"> <img src="images/tlbdshop.png" alt="example shop page for the little brown dog, that Louise created">
+                        <div class="tecust"><h2>Product Display</h2>
+                            <p>Creating a user friendly shopping experience for a range of customers.</p></div></div>
+                    <div class="image"><img src="images/swdpackages.png" alt="showing revolving flexbox created on signature web design site, Louise created">
+                        <div class="tecust"><h2>Turning Flexboxes</h2>
+                            <p>Highlighting relavant information only by using an interactive box feature.</p></div></div>
+                    <div class="image"><img src="images/tlbdcontact.png" alt="contact page for the little brown dog, that Louise created">
+                        <div class="tecust"><h2>Capturing User Data</h2>
+                            <p>Collecting user input and sending to company to create a contact form.</p></div></div>
+                    <div class="image"><img src="images/wwkcontact.png" alt="contact page for the little brown dog, that Louise created">
+                        <div class="tecust"><h2>Promoting Sales</h2>
+                            <p>Displaying a clear call to action across the website to enhance user engagement.</p></div></div>
                 </div>
-            </div>
-        </div>
-        </div>
-        
+             </div>   
     </main>
     <footer>
         <div id="footercontainer">

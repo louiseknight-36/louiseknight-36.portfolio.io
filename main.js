@@ -10,67 +10,67 @@ function myFunction() {
   }
 }
 
-// document.querySelectorAll('#contactForm input')
-// Array.from (document.querySelectorAll('#contactForm input')).reduce((acc, input) => ({...acc, [input.id]: input.value}), {});
+function addAnimation() {
 
-// https://www.youtube.com/watch?v=xJAxjstgITk&list=PLpc_YvcwbxaRSFpQQSNBBN3WxhFV7OaI_&index=20
-
-
-//don't think this works - whats XHR? lol//
-
-
-//to make onmouseover animation for the blob spin//
-
-
-// Collison button faffing 
-
-// $(function() {  
-//   $('.btn-6')
-//     .on('mouseenter', function(e) {
-//       var parentOffset = $(this).offset(),
-//           relX = e.pageX - parentOffset.left,
-//           relY = e.pageY - parentOffset.top;
-//       $(this).find('span').css({top:relY, left:relX})
-//     })
-//     .on('mouseout', function(e) {
-//       var parentOffset = $(this).offset(),
-//           relX = e.pageX - parentOffset.left,
-//           relY = e.pageY - parentOffset.top;
-//       $(this).find('span').css({top:relY, left:relX})
-//     });
-//   $('[href=#]').click(function(){return false});
-// });
-
-let popup = document.getElementById("popup")
-
-function openPopup() {
-  popup.classList.add("open-popup")
-}
-function closePopup() {
-  popup.classList.remove("open-popup")
-}
-
-let popupForm = document.getElementById("popupForm")
-
-function openPopupForm() {
-  popupForm.classList.add("open-popupForm")
-}
-function closePopupForm() {
-  popupForm.classList.remove("open-popupForm")
+  document.getElementById("blob").classList.add("animateBlob");
 }
 
 
-// // let customerName = prompt("Please enter your name", "<name goes here>");
+function removeAnimation() {
 
-// let customerName = document.getElementById("fname").value;
-// function prompt() {
+  document.getElementById("blob").classList.remove("animateBlob");
+}
 
-// // if (customerName!= null) {
 
-//     document.getElementById("welcome").innerHTML =
+// Stop page refreshing on form submit
 
-//     "Hello " + customerName + "! How are you today?";
+let form = document.getElementById("contactform");
 
-//     // addEventListener(window.onload);
-// // }
-// }
+function handleForm(event) { event.preventDefault(); }
+form.addEventListener('submit', handleForm);
+
+// Displays message on form submit
+
+let firstName = document.getElementById("fname").value;
+
+function formCompleted() {
+  if (document.getElementById("fname").value == "") {
+  alert("Hello! Please complete the form before sending");
+}
+else { 
+  return prompt();
+}
+}
+
+function prompt() {
+
+  let popupWelcome = document.getElementById("welcome-container");
+
+  let firstName = document.getElementById("fname").value;
+
+
+  let email = document.getElementById("email").value;
+
+  let message = document.getElementById("message-text").value;
+
+  popupWelcome.classList.add("open-welcome")
+
+  document.getElementById("outputFirstName").innerHTML = firstName
+  document.getElementById("outputEmail").innerHTML = email
+  document.getElementById("outputMessage").innerHTML = message
+
+}
+
+
+
+// Close Welcome Popup
+
+let closePopupWelcome = document.getElementById("welcome-container");
+
+
+function closeWelcomeContainer() {
+    closePopupWelcome.classList.remove("open-welcome");
+    document.getElementById("contactform").reset();
+}
+
+

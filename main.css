@@ -154,10 +154,10 @@ body {
 
 @media only screen and (max-width: 600px) {
     .left {
-        height:35vh;
+        height: 300px;
     }
     .right {
-        height:35vh;
+        height: 300px;
     }
 }
 
@@ -236,16 +236,23 @@ body {
    
 }
 .blob img{
-    animation: swivel 5s forwards;
+    /* animation: swivel 5s forwards; */
     transform: rotate(-270deg);
 
 }
 
-@keyframes swivel {
-    from { transform: rotate(-180deg);}
-    to {transform: rotate(-270deg);}  
+#blob.animateBlob {
+    animation: blobHover 2s linear;
 }
 
+@keyframes blobHover {
+    from {
+        transform: rotate(-270deg);
+    }
+    to {
+        transform: rotate(-630deg);
+    }
+}
 
 #aboutcontainer{
     display: flex;
@@ -299,7 +306,7 @@ body {
 
     .blob { 
         display: block;
-        margin-left: 410px;
+        margin-left: 510px;
         position: absolute;
         margin-top: 0;
 
@@ -313,7 +320,8 @@ body {
     .aboutinfo {
         width: 100%;
         position: absolute;
-        top: 60px;
+        top: 80px;
+        padding: 60px;
         
     }
     .about{
@@ -327,6 +335,13 @@ body {
         opacity: 20%;
     }
 
+}
+
+@media only screen and (max-width: 600px) {
+    .blob {
+        margin-left: 397px;
+        top: 674px;
+    }
 }
 
 #aboutcontainer::after {
@@ -520,7 +535,8 @@ li.check {
     #centraltext {
         display: flex;
         flex-direction: column;
-        
+        margin-top: -65px;
+        padding-bottom: 35px;       
         
     }
 
@@ -547,6 +563,8 @@ li.check {
 }
 }
 
+
+
 * {
     box-sizing: border-box;
   }
@@ -571,19 +589,18 @@ li.check {
 .col-12 {width: 100%;}
 
 
-@media only screen and (max-width: 800px) {
-    [class*="col-"] {
-    width: 100%;
-    height: auto;
-}
-}
-
-
 [class*="col-"] {
     float: left;
     padding: 15px;
     background-color: rgba(93,226,241,1);
     height: 200px;
+}
+
+@media only screen and (max-width: 800px) {
+    [class*="col-"] {
+    width: 100%;
+    height: auto;
+}
 }
 
 #footercontainer {
@@ -665,6 +682,18 @@ button {
     color: rgb(63, 63, 63);
 }
 
+#discf {
+    width: 10em;
+    height: 10em;
+    background-color: white;
+    background-image: url("images/LKnight.jpg");
+    background-size: 10em;
+    background-repeat: no-repeat;
+    border-radius: 50%;    
+    margin-left: 10px;
+   
+}
+
 @media only screen and (max-width: 800px) {
     #work a {
         text-align: center;
@@ -681,6 +710,13 @@ button {
     #connect p{
         text-align: center;
         margin-left: 0;
+    }
+    button {
+        margin-left: calc(50% - 85px);
+        
+    }
+    #discf {
+        display: none
     }
 }
 
@@ -741,7 +777,6 @@ fieldset {
     border: 0; 
    
 }
-
 
 legend {
     color:#fff;
@@ -827,166 +862,143 @@ input[type=submit] {
     align-items: center;
 }
 
-/* collison button faffing https://speckyboy.com/custom-hover-click-effects-css-javascript/ */
-/* .btn-11 {
-    position: relative;
-    $btn-color: random-color($max:200);
-    $btn-color-dark: shade($btn-color, 40%);
-    color: tint($btn-color);
-    
-    &:before,
-    &:after {
-      @include absolute(50%);
-      content: '';
-      @include size(20px);
-      background-color: $btn-color;
-      border-radius: 50%;
+@media only screen and (max-width: 800px) {
+   
+    #contact {
+        margin: 50px auto 40px;
     }
-    
-    &:before {
-      left: -20px;
-      transform: translate(-50%, -50%);
-      // animation: criss-cross-left 0.8s reverse;
-    }
-    
-    &:after {
-      right: -20px;
-      transform: translate(50%, -50%);
-      // animation: criss-cross-right 0.8s reverse;
-    }
-    
-    &:hover {
-      color: tint($btn-color, 75%); */
-  
-.popup * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-} 
+}
 
-/* .popupcontainer {
-        width:100%;
-        height: 100vh;
-        background: #3c5077;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+
+
+#welcome-container {
+        display: none;
+        width: 800px;
+        padding: 50px;
+        background: rgba(93, 226, 241, 1);
+        border-radius: 6px;
+        text-align: center;
+        color: #333;
+        margin: 0 auto;
+        z-index: 800;
+        position: absolute;
+        box-shadow: 0 0 20px #999;
+        top: 45%;
+        left: 54%;
+        transform: translateY(-955px) scale(0);
+        transition: all 1s ease-out;
+        z-index: 6;
+}
+    
+#welcome-container.open-welcome {
+        display: block;
+        transform: translateY(0) scale(1);
+}
+
+#welcome-container h2 {
+        font-family: Lobster;
+        font-size: 48px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 0;
+}
+    
+#welcome-container p {
+        font-size: 18px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-} */
-
-.popup {
-    width: 400px;
-    background: rgba(93,226,241,1);
-    border-radius: 6px;
-    position:absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.1);
-    text-align: center;
-    padding: 0 30px 30px;
-    color: #333;
-    visibility: hidden;
-    transition: transform 0.4s, top 0.4s;
-    z-index: 800;
+}
+    
+#welcome-container p span {
+        font-weight: 700;
+}
+    
+span#outputFirstName {
+        text-transform: capitalize;
+}
+    
+button#close {
+        display: block;
+        margin: 0 auto;
 }
 
-.open-popup {
-    visibility: visible;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.popup img {
-    width: 100px;
-    margin-top: -50px;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.popup h2 {
-    font-size: 38px;
-    font-weight: 500;
-    margin: 30px 0 10px;
-}
-
-.popup button {
-    width: 50%;
-    margin: 50px auto 0;
-    padding: 10px 0;
-    background: black;
-    color: #fff;
-    border: 0;
-    outline: none;
-    font-size: 18px;
-    border-radius: 4px;
-    cursor: pointer;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-    justify-content: left;
-
-
+@media only screen and (max-width: 800px) {
+    #welcome-container {
+        left: -30%;
+        width: 650px;
+    }
 }
 
 
-.popupForm * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-} 
+.carousel h1{
+        text-align: center;
+        font-family: 'Lobster';
+        font-size: 28px;
+}
 
-/* .popupFormcontainer {
-        width:100%;
-        height: 100vh;
-        margin-top: -850px;
-        background: #3c5077;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+.carousel p {
+        text-align: center;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-} */
-
-.popupForm {
-    width: auto;
-    /* height: 615px; */
-    padding: 50px;
-    background: #fff;
-    border:2px solid rgb(63, 63, 63);
-    border-radius: 6px;
-    position: absolute;
-    top: 180%;
-    left: calc(50% - 252px);
-    /* transform: translate(-50%, -50%) scale(0.1); */
-    text-align: center;
-    color: #333;
-    visibility: hidden;
-    transition: transform 0.4s, top 0.4s;
-    z-index: 10;
+        font-size: 20px;
 }
 
-.open-popupForm {
-    visibility: visible;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
+.carouselimage {
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 20px;
+        padding-bottom: 20px;
+}
+.carouselimage img {
+        width: 376px;
+        height: 376px;
+        object-fit: contain;
 }
 
-.popupForm h2 {
-    font-size: 38px;
-    font-weight: 500;
-    margin: 30px 0 10px;
+.image {
+        width: 380px;
+        height: 380px;
+        object-fit: contain;
+        border: 2px solid #333;
+        margin: 30px;
+        position: relative;
 }
 
-.popupFormbutton {
-    width: 50%;
-    padding: 10px 0;
-    background: black;
-    color: #fff;
-    border: 0;
-    outline: none;
-    font-size: 18px;
-    border-radius: 4px;
-    cursor: pointer;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-    justify-content: left;
+.tecust {
+        background-color: rgba(93, 226, 241, 0.8);
+        height: 376px;
+        width: 376px;
+        position: absolute;
+        top: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        padding: 20px;
+
+}
+
+.image:hover .tecust {
+        display: flex;
+}
+
+.tecust h2 {
+        font-family: 'Lobster';
+        text-align: center;
+        font-size: 18px;
+}
+
+.tecust p {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 600;
+        
+}
+
+@media only screen and (max-width: 800px) {
+
+    .carousel p {
+        padding: 25px;
+}
 }

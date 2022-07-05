@@ -8,14 +8,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="main.js" defer></script>
 </head>
 <body>
     <header>
         <nav class="navcontainer" id="myNav" >
                 <div class="navigation"> <a href="index.html">Home</a>  </div>
                 <div class="navigation"><a href="Connect.html">Contact Me</a> </div>
-                <div class="facontainer"><a href="#" class="fa fa-facebook"></a>
-                <a href="https://www.linkedin.com/in/louise-knight-1428a1168/" class="fa fa-linkedin"></a></div>
+                <div class="navigation"><a href="Gallery.html">Gallery</a> </div>
+                <div class="facontainer"><a href="https://www.facebook.com/Louiseknightdeveloper-103149352462996" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://www.linkedin.com/in/louise-knight-1428a1168/" target="_blank" class="fa fa-linkedin" ></a></div>
                 
 
         </nav>
@@ -32,10 +34,10 @@
         </div>
         <div id="boxone">
             <img id="shape-two" src="images/shape-26.svg">
-            <div class="blob"><img src="images/bg-shape1.svg"></div>
+            <div class="blob"><img id="blob" src="images/bg-shape1.svg"></div>
         </div>
         
-        <div id="aboutcontainer"> 
+        <div id="aboutcontainer" onmouseover="addAnimation()" onmouseout="removeAnimation()"> 
             <img id="skills" src="images/a-book-7010438_1280.jpg">
             <div class="aboutinfo">
                 <h2 id="about"> About Me</h2>                      
@@ -95,7 +97,7 @@
             </div>
                 <div class="row">
                     <div class="col-3">
-                        <button type="submit" value="#">Let's Connect</button>
+                        <button type="button" onclick="document.location='Gallery.html'">Project Snaps</button>
                     </div>
 
                     <div class="col-5">
@@ -114,12 +116,10 @@
                         </div>
                     </div>
                     <div class="col-2">
-                        <h2> Links</h2>
-                        <h2>More Links</h2>
+                        <div id="discf" img src="/images/LKnight.jpg"></div>
                     </div>
                 </div>
         </div>
     </footer>
 </body>
-<script src="main.js"></script>
 </html>
